@@ -1,0 +1,22 @@
+class Latte { String name() { return "Латте"; } }
+class Tea   { String name() { return "Чай"; } }
+
+class Cafe {
+    private final String kind;
+
+    Cafe(String kind) {
+        this.kind = kind;
+    }
+
+    void order() {
+        if (kind.equals("coffee")) {
+            Latte l = new Latte();
+            System.out.println("Готовим и выдаём: " + l.name());
+        } else if (kind.equals("tea")) {
+            Tea t = new Tea();
+            System.out.println("Готовим и выдаём: " + t.name());
+        } else {
+            throw new IllegalArgumentException(kind);
+        }
+    }
+}
