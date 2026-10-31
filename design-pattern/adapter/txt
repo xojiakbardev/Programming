@@ -1,0 +1,51 @@
+Vazifa
+
+Siz bildirishnomalar yuboruvchi tizim ishlab chiqishingiz kerak.
+Tizim foydalanuvchilarga SMS, Telegram va Email orqali xabar
+yuborishi mumkin.
+
+Tizimda quyidagi interfeys mavjud:
+
+NotificationService
+
+public interface NotificationService {
+    void send(String recipient, String message);
+}
+
+SMS xizmati ushbu interfeysga mos ishlaydi.
+Ammo Telegram va Email xizmatlari boshqa metodlarga ega:
+
+TelegramClient — sendTelegramMessage(String chatId, String text)
+
+EmailClient — sendEmail(String emailAddress, String subject, String body)
+
+Bu klasslarni o‘zgartirish mumkin emas.
+Ularni NotificationService interfeysi bilan ishlatish uchun Adapter Pattern dan foydalaning.
+
+Talablar
+
+NotificationService interfeysini yarating.
+
+SmsNotificationService klassini yarating.
+
+TelegramClient va EmailClient klasslarini yarating.
+Ularning metodlari yuqorida ko‘rsatilganidek bo‘lishi kerak.
+
+TelegramAdapter va EmailAdapter klasslarini yarating.
+Ular NotificationService interfeysini amalga oshirsin.
+
+NotificationManager klassini yarating.
+U NotificationService orqali xabar yuborsin.
+
+Main klassida SMS, Telegram va Email orqali xabar yuborishni tekshiring.
+
+Qo‘shimcha shart
+
+NotificationManager ichida
+Telegram yoki Email uchun alohida tekshiruvlar (if/else) bo‘lmasligi kerak.
+U faqat NotificationService interfeysi bilan ishlashi lozim.
+
+Kutilayotgan natija
+
+Barcha xizmatlar bir xil interfeys orqali ishlaydi,
+garchi ularning dastlabki metodlari bir-biridan farq qilsa ham.
