@@ -1,0 +1,30 @@
+# Amaliy topshiriq: Facade loyihalash namunasi
+
+Mavzu: «Sayohatni tashkil qilish tizimi»
+
+Sayohatni tashkil qilish jarayonini soddalashtiruvchi dastur yarating. Buning uchun bir nechta alohida xizmatlarni yagona interfeys orqali boshqarish imkonini beruvchi Facade loyihalash namunasidan foydalaning.
+
+### Talablar:
+
+1. FlightBooking klassini yarating. U aviachiptalarni bron qilish va bekor qilish uchun javob beradi.
+2. HotelBooking klassini yarating. U mehmonxonadan xona bron qilish va bekor qilish uchun javob beradi.
+3. Payment klassini yarating. U to‘lovni amalga oshirish va qaytarish uchun javob beradi.
+4. TravelFacade klassini yarating. U yuqoridagi uchta klassni boshqaradi va foydalanuvchiga yagona interfeys taqdim etadi.
+
+### Dasturning ishlashini tekshirish:
+
+Asosiy dasturda TravelFacade obyektini yarating va quyidagi amallarni bajaring:
+
+- Sayohatni bron qilish (aviachipta, mehmonxona va to‘lov).
+- Sayohatni bekor qilish (bronlarni bekor qilish va to‘lovni qaytarish).
+
+Har bir jarayon davomida bajarilgan amallar haqida xabarlarni ekranga chiqaring.
+
+### Shartlar:
+
+- Har bir xizmat alohida klassda amalga oshirilishi kerak.
+- TravelFacade barcha xizmatlarni boshqarishi kerak.
+- Asosiy dasturda xizmat klasslarini alohida chaqirmasdan, faqat Facade orqali ishlash kerak.
+- Tayyor kutubxonalardan foydalanmang.
+
+Topshiriq har bir talaba tomonidan o‘zi tanlagan dasturlash tilida bajariladi.
